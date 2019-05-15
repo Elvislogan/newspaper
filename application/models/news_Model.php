@@ -3,7 +3,7 @@ class news_Model extends CI_Model
 {
     public function __construct()
     {
-        $this->load->database('newspaper');
+        $this->load->database();
     }
     public function get_news($slug = false)
     {
@@ -18,7 +18,7 @@ class news_Model extends CI_Model
     }
     public function set_news()
     {
-      $this->load->helper('localhost/newspaper');
+      $this->load->helper();
 
       $slug = url_title($this->input->post('title'), 'dash', TRUE);
 
